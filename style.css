@@ -2,56 +2,62 @@
 
 body {
     font-family: Arial, sans-serif;
+    background: #eafaf1;
+    color: #333;
     margin: 0;
     padding: 0;
-    background: #f0f9f0;
-    color: #333;
+    text-align: center;
 }
 
 header {
     background: #4CAF50;
     color: white;
     padding: 1em;
-    text-align: center;
-    animation: fadeIn 2s;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    background: #388E3C;
-    padding: 0.5em;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+    animation: fadeIn 2s ease;
 }
 
 main {
+    max-width: 800px;
+    margin: 0 auto;
     padding: 2em;
 }
 
 section {
-    margin-bottom: 2em;
     background: white;
-    padding: 1em;
+    margin-bottom: 2em;
+    padding: 1.5em;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
 }
 
 section:hover {
     transform: scale(1.02);
 }
 
+h2, h3 {
+    color: #388E3C;
+}
+
+.imagem {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    margin-top: 1em;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.imagem:hover {
+    transform: scale(1.05);
+}
+
 button {
-    padding: 0.5em 1em;
     background: #4CAF50;
     color: white;
     border: none;
+    padding: 0.7em 1.5em;
+    margin-top: 1em;
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s;
@@ -59,23 +65,6 @@ button {
 
 button:hover {
     background: #388E3C;
-}
-
-.imagem-click {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 10px;
-    margin-top: 1em;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.imagem-click:hover {
-    transform: scale(1.05);
-}
-
-.oculto {
-    display: none;
 }
 
 @keyframes fadeIn {

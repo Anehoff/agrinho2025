@@ -3,74 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agrinho 2025 - Sustentabilidade</title>
+    <title>Práticas Sustentáveis</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-    <h1>Agrinho 2025</h1>
-    <nav>
-        <a href="#problemas">Problemas Ambientais</a>
-        <a href="#solucoes">Soluções Sustentáveis</a>
-        <a href="#curiosidades">Curiosidades</a>
-        <a href="#quiz">Quiz</a>
-    </nav>
+    <h1>🌱 Práticas Sustentáveis na Agricultura e Pecuária</h1>
 </header>
 
-<section id="problemas">
-    <h2>Problemas Ambientais</h2>
+<nav>
     <ul>
-        <li>Desmatamento para pastagens.</li>
-        <li>Uso excessivo de agrotóxicos.</li>
-        <li>Emissão de gases do efeito estufa (metano).</li>
-        <li>Contaminação de rios e solos.</li>
+        <li><a href="#definicao">Definição</a></li>
+        <li><a href="#problemas">Problemas</a></li>
+        <li><a href="#estrategias">Estratégias</a></li>
+        <li><a href="#aplicacao">Aplicação</a></li>
+        <li><a href="#quiz">Quiz</a></li>
     </ul>
-</section>
+</nav>
 
-<section id="solucoes">
-    <h2>Soluções Sustentáveis</h2>
-    <ul>
-        <li>Agricultura de precisão.</li>
-        <li>Sistemas integrados lavoura-pecuária-floresta (ILPF).</li>
-        <li>Uso de biofertilizantes e controle biológico de pragas.</li>
-        <li>Rotação de culturas.</li>
-    </ul>
-</section>
+<main>
 
-<section id="curiosidades">
-    <h2>Curiosidades</h2>
-    <ul>
-        <li>O Brasil é líder mundial em agricultura sustentável com ILPF.</li>
-        <li>A pecuária regenerativa pode capturar mais carbono do que emite.</li>
-        <li>O controle biológico já substitui até 30% dos agrotóxicos no Brasil.</li>
-    </ul>
-</section>
+    <section id="definicao">
+        <h2>O que são Práticas Sustentáveis?</h2>
+        <p>São técnicas que equilibram produção e preservação do meio ambiente.</p>
+        <img src="img/praticas-sustentaveis.jpg" alt="Imagem ilustrativa de práticas sustentáveis" class="imagem-click">
+    </section>
 
-<section id="quiz">
-    <h2>Quiz Interativo</h2>
-    <div class="quiz">
-        <div class="question">
-            <p>1. O que é a ILPF?</p>
-            <button onclick="checkAnswer(this, true)">Sistema integrado de produção</button>
-            <button onclick="checkAnswer(this, false)">Uso de pesticidas químicos</button>
+    <section id="problemas">
+        <h2>Problemas Comuns</h2>
+        <ul>
+            <li>Erosão do solo</li>
+            <li>Contaminação hídrica</li>
+            <li>Emissão de gases</li>
+        </ul>
+        <img src="img/erosao.jpg" alt="Imagem de erosão" class="imagem-click">
+    </section>
+
+    <section id="estrategias">
+        <h2>Estratégias de Manejo</h2>
+        <div>
+            <h3 onclick="toggleTexto('plantio')">Plantio Direto ➕</h3>
+            <p id="plantio" class="oculto">Evita o revolvimento do solo, preservando sua estrutura e nutrientes.</p>
+            <img src="img/plantio-direto.jpg" alt="Plantio direto" class="imagem-click">
         </div>
 
-        <div class="question">
-            <p>2. Como a pecuária pode ajudar o meio ambiente?</p>
-            <button onclick="checkAnswer(this, true)">Adotando práticas regenerativas</button>
-            <button onclick="checkAnswer(this, false)">Expandindo áreas de pastagem</button>
+        <div>
+            <h3 onclick="toggleTexto('rotacao')">Rotação de Culturas ➕</h3>
+            <p id="rotacao" class="oculto">Alternância entre espécies reduz pragas e melhora o solo.</p>
+            <img src="img/rotacao.jpg" alt="Rotação de culturas" class="imagem-click">
         </div>
 
-        <div id="resultado" class="result"></div>
-    </div>
-</section>
+        <div>
+            <h3 onclick="toggleTexto('ilpf')">ILPF ➕</h3>
+            <p id="ilpf" class="oculto">Integra produção agrícola, pecuária e florestal, aumentando sustentabilidade.</p>
+            <img src="img/ilpf.jpg" alt="Integração Lavoura-Pecuária-Floresta" class="imagem-click">
+        </div>
+    </section>
+
+    <section id="aplicacao">
+        <h2>Aplicação Sustentável</h2>
+        <button onclick="mostrarMensagem()">Clique para uma dica!</button>
+        <p id="mensagem"></p>
+        <img src="img/aplicacao.jpg" alt="Aplicação sustentável" class="imagem-click">
+    </section>
+
+    <section id="quiz">
+        <h2>Quiz Interativo</h2>
+        <p>Qual é uma prática que evita erosão do solo?</p>
+        <button onclick="responderQuiz(true)">Plantio Direto</button>
+        <button onclick="responderQuiz(false)">Queima de pastagens</button>
+        <p id="respostaQuiz"></p>
+    </section>
+
+</main>
 
 <footer>
-    <p>© 2025 Agrinho | Sustentabilidade e Interação Campo-Cidade</p>
+    <p>Material didático — Engenharia Agrícola Sustentável</p>
 </footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>

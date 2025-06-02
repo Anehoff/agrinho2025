@@ -12,68 +12,63 @@
     <h1>🌱 Práticas Sustentáveis na Agricultura e Pecuária</h1>
 </header>
 
-<nav>
-    <ul>
-        <li><a href="#definicao">Definição</a></li>
-        <li><a href="#problemas">Problemas</a></li>
-        <li><a href="#estrategias">Estratégias</a></li>
-        <li><a href="#aplicacao">Aplicação</a></li>
-        <li><a href="#quiz">Quiz</a></li>
-    </ul>
-</nav>
-
 <main>
 
-    <section id="definicao">
-        <h2>O que são Práticas Sustentáveis?</h2>
-        <p>São técnicas que equilibram produção e preservação do meio ambiente.</p>
-        <img src="img/praticas-sustentaveis.jpg" alt="Imagem ilustrativa de práticas sustentáveis" class="imagem-click">
+    <section id="introducao">
+        <h2>Introdução</h2>
+        <p>
+            As práticas sustentáveis visam integrar produtividade agrícola e pecuária com conservação ambiental, garantindo segurança alimentar e preservação dos recursos naturais.
+        </p>
+        <img src="img/sustentabilidade.jpg" alt="Sustentabilidade no campo" class="imagem">
     </section>
 
     <section id="problemas">
-        <h2>Problemas Comuns</h2>
+        <h2>Problemas da Agricultura Convencional</h2>
         <ul>
-            <li>Erosão do solo</li>
-            <li>Contaminação hídrica</li>
-            <li>Emissão de gases</li>
+            <li>Erosão e compactação do solo.</li>
+            <li>Poluição de rios e lençóis freáticos.</li>
+            <li>Perda de biodiversidade.</li>
+            <li>Emissão de gases do efeito estufa.</li>
         </ul>
-        <img src="img/erosao.jpg" alt="Imagem de erosão" class="imagem-click">
+        <img src="img/problemas.jpg" alt="Problemas ambientais" class="imagem">
     </section>
 
     <section id="estrategias">
-        <h2>Estratégias de Manejo</h2>
-        <div>
-            <h3 onclick="toggleTexto('plantio')">Plantio Direto ➕</h3>
-            <p id="plantio" class="oculto">Evita o revolvimento do solo, preservando sua estrutura e nutrientes.</p>
-            <img src="img/plantio-direto.jpg" alt="Plantio direto" class="imagem-click">
-        </div>
+        <h2>Principais Estratégias Sustentáveis</h2>
 
-        <div>
-            <h3 onclick="toggleTexto('rotacao')">Rotação de Culturas ➕</h3>
-            <p id="rotacao" class="oculto">Alternância entre espécies reduz pragas e melhora o solo.</p>
-            <img src="img/rotacao.jpg" alt="Rotação de culturas" class="imagem-click">
-        </div>
+        <h3>1. Plantio Direto</h3>
+        <p>
+            Técnica que mantém a palhada sobre o solo, evitando erosão e aumentando a infiltração de água.
+        </p>
+        <img src="img/plantio-direto.jpg" alt="Plantio direto" class="imagem">
 
-        <div>
-            <h3 onclick="toggleTexto('ilpf')">ILPF ➕</h3>
-            <p id="ilpf" class="oculto">Integra produção agrícola, pecuária e florestal, aumentando sustentabilidade.</p>
-            <img src="img/ilpf.jpg" alt="Integração Lavoura-Pecuária-Floresta" class="imagem-click">
-        </div>
+        <h3>2. Rotação de Culturas</h3>
+        <p>
+            Alternância planejada de espécies vegetais para melhorar a fertilidade do solo e quebrar ciclos de pragas.
+        </p>
+        <img src="img/rotacao.jpg" alt="Rotação de culturas" class="imagem">
+
+        <h3>3. Integração Lavoura-Pecuária-Floresta (ILPF)</h3>
+        <p>
+            Sistema que combina agricultura, pecuária e silvicultura, promovendo diversificação produtiva e recuperação de áreas degradadas.
+        </p>
+        <img src="img/ilpf.jpg" alt="ILPF" class="imagem">
     </section>
 
     <section id="aplicacao">
         <h2>Aplicação Sustentável</h2>
-        <button onclick="mostrarMensagem()">Clique para uma dica!</button>
+        <p>
+            Para uma aplicação efetiva é necessário o diagnóstico ambiental da propriedade, capacitação técnica e o uso racional dos recursos naturais.
+        </p>
+        <button onclick="mostrarDica()">Clique para uma dica!</button>
         <p id="mensagem"></p>
-        <img src="img/aplicacao.jpg" alt="Aplicação sustentável" class="imagem-click">
     </section>
 
     <section id="quiz">
-        <h2>Quiz Interativo</h2>
-        <p>Qual é uma prática que evita erosão do solo?</p>
-        <button onclick="responderQuiz(true)">Plantio Direto</button>
-        <button onclick="responderQuiz(false)">Queima de pastagens</button>
-        <p id="respostaQuiz"></p>
+        <h2>Quiz: Teste seus Conhecimentos!</h2>
+        <div id="perguntas"></div>
+        <button onclick="verificarRespostas()">Verificar Respostas</button>
+        <p id="resultado"></p>
     </section>
 
 </main>

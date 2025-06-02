@@ -1,58 +1,84 @@
+/* style.css */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f8f5;
+    background: #f0f9f0;
     color: #333;
 }
 
 header {
-    background-color: #4CAF50;
+    background: #4CAF50;
     color: white;
-    padding: 20px;
+    padding: 1em;
     text-align: center;
+    animation: fadeIn 2s;
 }
 
-nav a {
-    margin: 0 15px;
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    background: #388E3C;
+    padding: 0.5em;
+}
+
+nav ul li a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 2em;
 }
 
 section {
-    padding: 20px;
+    margin-bottom: 2em;
+    background: white;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
 }
 
-.quiz {
-    margin-top: 20px;
-}
-
-.question {
-    margin-bottom: 10px;
-}
-
-.result {
-    margin-top: 10px;
-    font-weight: bold;
-    color: #4CAF50;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    padding: 15px;
-    text-align: center;
+section:hover {
+    transform: scale(1.02);
 }
 
 button {
-    margin: 5px;
-    padding: 10px 15px;
+    padding: 0.5em 1em;
+    background: #4CAF50;
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #e0e0e0;
+    transition: background 0.3s;
 }
 
 button:hover {
-    background-color: #ccc;
+    background: #388E3C;
+}
+
+.imagem-click {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    margin-top: 1em;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.imagem-click:hover {
+    transform: scale(1.05);
+}
+
+.oculto {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }

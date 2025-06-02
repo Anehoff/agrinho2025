@@ -1,82 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Práticas Sustentáveis</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Práticas Sustentáveis na Agricultura e Pecuária</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<header>
+  <header>
     <h1>🌱 Práticas Sustentáveis na Agricultura e Pecuária</h1>
-</header>
+  </header>
 
-<main>
-
-    <section id="introducao">
-        <h2>Introdução</h2>
-        <p>
-            As práticas sustentáveis visam integrar produtividade agrícola e pecuária com conservação ambiental, garantindo segurança alimentar e preservação dos recursos naturais.
-        </p>
-        <img src="img/sustentabilidade.jpg" alt="Sustentabilidade no campo" class="imagem">
+  <main>
+    <section>
+      <h2>Introdução</h2>
+      <p>As práticas sustentáveis visam minimizar os impactos ambientais e garantir a produtividade a longo prazo. São essenciais para preservar os recursos naturais e melhorar a qualidade de vida das comunidades rurais.</p>
     </section>
 
-    <section id="problemas">
-        <h2>Problemas da Agricultura Convencional</h2>
-        <ul>
-            <li>Erosão e compactação do solo.</li>
-            <li>Poluição de rios e lençóis freáticos.</li>
-            <li>Perda de biodiversidade.</li>
-            <li>Emissão de gases do efeito estufa.</li>
-        </ul>
-        <img src="img/problemas.jpg" alt="Problemas ambientais" class="imagem">
+    <section>
+      <h2>Problemas da Agricultura Convencional</h2>
+      <ul>
+        <li>Perda de biodiversidade.</li>
+        <li>Erosão do solo.</li>
+        <li>Emissão de gases do efeito estufa.</li>
+        <li>Contaminação de recursos hídricos.</li>
+      </ul>
     </section>
 
-    <section id="estrategias">
-        <h2>Principais Estratégias Sustentáveis</h2>
+    <section>
+      <h2>Principais Estratégias Sustentáveis</h2>
 
-        <h3>1. Plantio Direto</h3>
-        <p>
-            Técnica que mantém a palhada sobre o solo, evitando erosão e aumentando a infiltração de água.
-        </p>
-        <img src="img/plantio-direto.jpg" alt="Plantio direto" class="imagem">
+      <h3>1. Plantio Direto</h3>
+      <p>Técnica que mantém a palhada sobre o solo, evitando erosão e aumentando a infiltração de água. Além disso, contribui para a retenção de carbono no solo.</p>
+      <img src="plantio-direto.jpg" alt="Imagem de plantio direto">
 
-        <h3>2. Rotação de Culturas</h3>
-        <p>
-            Alternância planejada de espécies vegetais para melhorar a fertilidade do solo e quebrar ciclos de pragas.
-        </p>
-        <img src="img/rotacao.jpg" alt="Rotação de culturas" class="imagem">
+      <h3>2. Rotação de Culturas</h3>
+      <p>Alternância planejada de espécies vegetais, melhorando a fertilidade do solo e quebrando ciclos de pragas e doenças.</p>
+      <img src="rotacao-culturas.jpg" alt="Imagem de rotação de culturas">
 
-        <h3>3. Integração Lavoura-Pecuária-Floresta (ILPF)</h3>
-        <p>
-            Sistema que combina agricultura, pecuária e silvicultura, promovendo diversificação produtiva e recuperação de áreas degradadas.
-        </p>
-        <img src="img/ilpf.jpg" alt="ILPF" class="imagem">
+      <h3>3. Integração Lavoura-Pecuária-Floresta (ILPF)</h3>
+      <p>Sistema que combina atividades agrícolas, pecuárias e florestais em uma mesma área, promovendo maior eficiência no uso da terra e sustentabilidade ambiental.</p>
+      <img src="ilpf.jpg" alt="Imagem de integração lavoura-pecuária-floresta">
     </section>
 
-    <section id="aplicacao">
-        <h2>Aplicação Sustentável</h2>
-        <p>
-            Para uma aplicação efetiva é necessário o diagnóstico ambiental da propriedade, capacitação técnica e o uso racional dos recursos naturais.
-        </p>
-        <button onclick="mostrarDica()">Clique para uma dica!</button>
-        <p id="mensagem"></p>
+    <section>
+      <h2>Quiz: Teste seus conhecimentos</h2>
+      <div id="quiz"></div>
+      <button onclick="verificarRespostas()">Verificar Respostas</button>
     </section>
+  </main>
 
-    <section id="quiz">
-        <h2>Quiz: Teste seus Conhecimentos!</h2>
-        <div id="perguntas"></div>
-        <button onclick="verificarRespostas()">Verificar Respostas</button>
-        <p id="resultado"></p>
-    </section>
-
-</main>
-
-<footer>
-    <p>Material didático — Engenharia Agrícola Sustentável</p>
-</footer>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

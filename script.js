@@ -1,86 +1,76 @@
-// script.js
-
-function mostrarDica() {
-    document.getElementById("mensagem").textContent = "✅ Sempre avalie a capacidade de suporte do solo antes de definir sua prática agrícola.";
-}
-
-// Quiz com 10 perguntas
-const perguntas = [
-    {
-        pergunta: "1. O que é plantio direto?",
-        opcoes: ["Revolvimento total do solo", "Manter a palhada sobre o solo", "Queima de resíduos"],
-        resposta: 1
-    },
-    {
-        pergunta: "2. Qual o benefício da rotação de culturas?",
-        opcoes: ["Aumenta pragas", "Diminui fertilidade", "Melhora o solo e quebra ciclo de pragas"],
-        resposta: 2
-    },
-    {
-        pergunta: "3. ILPF significa:",
-        opcoes: ["Inovação Legal de Produção Florestal", "Integração Lavoura-Pecuária-Floresta", "Investimento em Lavouras de Pequena Fusão"],
-        resposta: 1
-    },
-    {
-        pergunta: "4. Qual é um problema causado pela agricultura convencional?",
-        opcoes: ["Melhoria da biodiversidade", "Compactação do solo", "Aumento de infiltração da água"],
-        resposta: 1
-    },
-    {
-        pergunta: "5. A prática sustentável visa:",
-        opcoes: ["Aumentar poluentes", "Intensificar queimadas", "Conciliar produção com preservação ambiental"],
-        resposta: 2
-    },
-    {
-        pergunta: "6. A erosão do solo é causada principalmente por:",
-        opcoes: ["Má gestão do solo", "Uso de palhada", "Rotação de culturas"],
-        resposta: 0
-    },
-    {
-        pergunta: "7. A ILPF contribui para:",
-        opcoes: ["Monocultura", "Diversificação produtiva", "Poluição hídrica"],
-        resposta: 1
-    },
-    {
-        pergunta: "8. O plantio direto ajuda a:",
-        opcoes: ["Expor nutrientes", "Proteger o solo", "Aumentar a erosão"],
-        resposta: 1
-    },
-    {
-        pergunta: "9. A rotação de culturas evita:",
-        opcoes: ["Ciclo de pragas", "Diversificação do solo", "Preservação do ambiente"],
-        resposta: 0
-    },
-    {
-        pergunta: "10. A sustentabilidade busca:",
-        opcoes: ["Exclusivamente lucro", "Equilíbrio entre produção e meio ambiente", "Exploração intensa dos recursos"],
-        resposta: 1
-    }
+const quizData = [
+  {
+    pergunta: "O que é plantio direto?",
+    alternativas: ["Plantio com irrigação artificial", "Técnica que mantém a palhada sobre o solo", "Uso exclusivo de sementes transgênicas"],
+    correta: 1
+  },
+  {
+    pergunta: "Qual é um dos principais problemas da agricultura convencional?",
+    alternativas: ["Fixação de carbono", "Aumento da biodiversidade", "Erosão do solo"],
+    correta: 2
+  },
+  {
+    pergunta: "O que a rotação de culturas promove?",
+    alternativas: ["Aumento de pragas", "Equilíbrio nutricional do solo", "Poluição hídrica"],
+    correta: 1
+  },
+  {
+    pergunta: "ILPF é a sigla para:",
+    alternativas: ["Iniciativa Livre de Produtos Férteis", "Integração Lavoura-Pecuária-Floresta", "Índice de Lavoura e Pastagem Familiar"],
+    correta: 1
+  },
+  {
+    pergunta: "A compactação do solo dificulta:",
+    alternativas: ["A entrada de oxigênio e água", "A aplicação de adubo químico", "A emissão de gases do solo"],
+    correta: 0
+  },
+  {
+    pergunta: "A principal vantagem do plantio direto é:",
+    alternativas: ["Redução de mão-de-obra", "Redução da erosão", "Aumento do uso de agroquímicos"],
+    correta: 1
+  },
+  {
+    pergunta: "O que caracteriza uma prática sustentável?",
+    alternativas: ["Lucro imediato", "Equilíbrio entre produção e meio ambiente", "Uso intensivo de defensivos"],
+    correta: 1
+  },
+  {
+    pergunta: "Qual dessas é uma prática sustentável?",
+    alternativas: ["Queimada controlada anual", "Plantio direto", "Uso de fertilizante nitrogenado em excesso"],
+    correta: 1
+  },
+  {
+    pergunta: "A biodiversidade é importante para:",
+    alternativas: ["Aumentar o número de pragas", "Equilíbrio ecológico e controle natural de doenças", "Evitar a rotação de culturas"],
+    correta: 1
+  },
+  {
+    pergunta: "ILPF promove:",
+    alternativas: ["Monocultura extensiva", "Desmatamento", "Eficiência no uso da terra"],
+    correta: 2
+  }
 ];
 
-const containerPerguntas = document.getElementById('perguntas');
-
-perguntas.forEach((q, index) => {
-    const div = document.createElement('div');
-    div.innerHTML = `<p>${q.pergunta}</p>`;
-    q.opcoes.forEach((opcao, i) => {
-        div.innerHTML += `
-            <label>
-                <input type="radio" name="pergunta${index}" value="${i}">
-                ${opcao}
-            </label><br>
-        `;
-    });
-    containerPerguntas.appendChild(div);
-});
-
 function verificarRespostas() {
-    let acertos = 0;
-    perguntas.forEach((q, index) => {
-        const resposta = document.querySelector(`input[name="pergunta${index}"]:checked`);
-        if (resposta && parseInt(resposta.value) === q.resposta) {
-            acertos++;
-        }
-    });
-    document.getElementById("resultado").textContent = `✅ Você acertou ${acertos} de ${perguntas.length} perguntas!`;
+  const respostas = document.querySelectorAll('input[type=radio]:checked');
+  let acertos = 0;
+  respostas.forEach((resposta, i) => {
+    if (parseInt(resposta.value) === quizData[i].correta) acertos++;
+  });
+  alert(`Você acertou ${acertos} de ${quizData.length} questões.`);
 }
+
+function montarQuiz() {
+  const quiz = document.getElementById('quiz');
+  quizData.forEach((q, i) => {
+    const div = document.createElement('div');
+    div.className = 'quiz-question';
+    div.innerHTML = `<strong>${i + 1}. ${q.pergunta}</strong><br>` +
+      q.alternativas.map((alt, j) =>
+        `<label><input type="radio" name="q${i}" value="${j}"> ${alt}</label><br>`
+      ).join('');
+    quiz.appendChild(div);
+  });
+}
+
+montarQuiz();

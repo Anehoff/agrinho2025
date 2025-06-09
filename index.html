@@ -3,41 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🌱 Práticas Sustentáveis na Agricultura</title>
-  <link rel="stylesheet" href="style_agro.css">
+  <title>Manejo Sustentável na Agricultura</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
-    <h1>🌱 Práticas Sustentáveis na Agricultura</h1>
-    <p>Educação e manejo consciente para um futuro verde</p>
+    <h1>Manejo Sustentável na Agricultura</h1>
   </header>
+
   <main>
-    <h2>O que são Práticas Sustentáveis?</h2>
-    <p>São técnicas que preservam os recursos naturais, como o solo, a água e a biodiversidade, garantindo produtividade a longo prazo.</p>
-    <img src="img1_agricultura_sustentavel.png" alt="Exemplo de plantio direto">
+    <section>
+      <img src="imagens/sustentabilidade_agricola.jpg" alt="Plantação com práticas sustentáveis">
+      <p id="intro"></p>
+    </section>
 
-    <h2>Principais Problemas do Manejo Convencional</h2>
-    <ul>
-      <li>Erosão e perda de nutrientes do solo</li>
-      <li>Contaminação da água por agrotóxicos</li>
-      <li>Redução da biodiversidade</li>
-      <li>Emissão de gases do efeito estufa</li>
-    </ul>
-    <img src="img2_problemas_convencionais.png" alt="Problemas da agricultura convencional">
+    <section>
+      <h2>Funcionalidade da Prática</h2>
+      <p>
+        O manejo sustentável visa preservar os recursos naturais, mantendo a produtividade e respeitando os limites ecológicos. Envolve técnicas que minimizam a degradação do solo, reduzem o uso de agrotóxicos e promovem a biodiversidade.
+      </p>
+    </section>
 
-    <h2>Práticas Recomendadas</h2>
-    <ul>
-      <li>Plantio direto</li>
-      <li>Rotações de cultura</li>
-      <li>Uso racional da água e energia</li>
-      <li>Integração lavoura-pecuária-floresta (ILPF)</li>
-    </ul>
-    <img src="img3_ilpf.png" alt="Integração Lavoura-Pecuária-Floresta">
+    <section>
+      <h2>Problemas Enfrentados</h2>
+      <ul>
+        <li>Degradação do solo e perda de fertilidade;</li>
+        <li>Uso excessivo de defensivos agrícolas;</li>
+        <li>Dependência de monoculturas;</li>
+        <li>Contaminação de recursos hídricos.</li>
+      </ul>
+    </section>
 
-    <h2>Quiz Interativo</h2>
-    <div id="quiz"></div>
-    <button onclick="verificarRespostas()">Verificar Respostas</button>
+    <section>
+      <h2>Estratégias de Manejo</h2>
+      <ul>
+        <li>Rotação de culturas para quebrar ciclos de pragas;</li>
+        <li>Plantio direto para conservação do solo;</li>
+        <li>Uso de adubação orgânica e compostagem;</li>
+        <li>Integração lavoura-pecuária-floresta (ILPF).</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Aplicação Sustentável</h2>
+      <p>
+        A aplicação sustentável depende do contexto local. É essencial o diagnóstico do solo, clima, recursos disponíveis e a capacitação técnica dos trabalhadores. Tecnologias como sensores de umidade e agricultura de precisão auxiliam na eficiência dos insumos.
+      </p>
+    </section>
+
+    <section>
+      <h2>Exemplo Visual</h2>
+      <img src="imagens/ilpf_exemplo.jpg" alt="Sistema ILPF em prática">
+    </section>
+
+    <section id="quiz">
+      <h2>Quiz Interativo</h2>
+      <p>Qual das alternativas abaixo NÃO é uma estratégia sustentável?</p>
+      <form>
+        <label><input type="radio" name="q1" value="a"> Plantio direto</label><br>
+        <label><input type="radio" name="q1" value="b"> Uso intensivo de agrotóxicos</label><br>
+        <label><input type="radio" name="q1" value="c"> Integração lavoura-pecuária</label><br>
+        <label><input type="radio" name="q1" value="d"> Compostagem</label><br><br>
+        <button type="button" onclick="verificarResposta()">Verificar Resposta</button>
+      </form>
+      <p id="resposta"></p>
+    </section>
   </main>
-  <script src="quiz_agro.js"></script>
+
+  <script src="script.js"></script>
 </body>
 </html>
